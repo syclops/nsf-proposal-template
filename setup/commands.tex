@@ -1,0 +1,60 @@
+% User-defined commands go here. For any commands that require a specific
+% package to be loaded, begin the block with a comment line that specifies
+% "Required: ..." to clearly mark that it's a package-specific customization.
+
+\newcommand{\steve}[1]{\textcolor{red}{[SM: #1]}}
+\newcommand{\draft}[1]{\textcolor{blue}{[Draft text: #1]}}
+
+% For some papers, we define new notation that only works in math mode. Ensure
+% that these can be easily mentioned in text, with the proper spacing, using the
+% following wrapper command.
+\newcommand{\emxs}[1]{\ensuremath{#1}\xspace}
+
+% Improve formatting of paragraphs.
+\renewcommand{\paragraph}[2][.]{\smallskip\noindent\textbf{#2#1}}
+
+% Required: cite (possibly with noadjust option)
+% Fix ugly citation style: [1],[2] --> [1,2].
+%\renewcommand{\citepunct}{, }
+%\renewcommand{\citedash}{--}
+
+% Required: enumitem (with inline option)
+% A more compact enumerate style (smaller left margins and less spacing between
+% items).
+\newenvironment{compactenum}[1][\arabic*.]
+{\begin{enumerate}[label={#1}, noitemsep]}
+{\end{enumerate}}
+% A more compact itemize style.
+\newenvironment{compactitem}
+{\begin{itemize}[noitemsep]}
+{\end{itemize}}
+% Enumerated lists inside paragraphs.
+\newenvironment{inparaenum}[1][(\arabic*)]
+{\begin{enumerate*}[label={#1}, itemjoin={{, }}, itemjoin*={{, and }}]}
+{\end{enumerate*}}
+
+% Required: hyperref
+% The \autoref command ensures that the proper term is used for the relevant
+% reference. Customize the relevant terms for each reference type here.
+\renewcommand*{\sectionautorefname}{Sec.}
+%\renewcommand*{\figureautorefname}{Figure}
+%\renewcommand*{\tableautorefname}{Table}
+%\renewcommand*{\footnoteautorefname}{Footnote}
+%\renewcommand*{\equationautorefname}{Equation}
+%\renewcommand*{\itemautorefname}{Definition}
+% If any packages introduce a new type of reference, then they should be
+% customized here.
+%\newcommand\definitionautorefname{Definition}
+%\newcommand{\algorithmautorefname}{Algorithm}
+% In some templates, subsections are referred to as "Subsection x.y", while
+% they may be referred to as "Section x.y" instead. The following line ensures
+% that sections and subsections are always referred to with the same identifier.
+\let\subsectionautorefname\sectionautorefname
+% Footnotes need to be the same size as regular text.
+\renewcommand{\footnotesize}{\normalsize}
+
+% Required: msc
+% Message sequence charts by default display "msc" in the corner of the chart.
+% Turn that off here.
+%\setmsckeyword{}
+

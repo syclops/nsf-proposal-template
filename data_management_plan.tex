@@ -1,0 +1,72 @@
+% Use 11-point font for Times New Roman (PAPPG 23-1, I.II.C.2.a)
+\documentclass[11pt]{article}
+
+\usepackage{acro}
+\usepackage[inline]{enumitem}
+% Use 1-inch margins (PAPPG 23-1, I.II.C.2.c)
+\usepackage[margin=1in]{geometry}
+% Use Times New Roman font (PAPPG 23-1, I.II.C.2.a)
+\usepackage{mathptmx}
+\usepackage{xcolor}
+
+% Turn off page numbering (PAPPG 23-1, I.II.C.1)
+\pagestyle{empty}
+
+% Environment to define in-paragraph lists.
+\newenvironment{inparaenum}[1][(\arabic*)]
+{\begin{enumerate*}[label={#1}, itemjoin={{, }}, itemjoin*={{, and }}]}
+{\end{enumerate*}}
+
+\newcommand{\sm}[1]{\textcolor{magenta}{[SM: #1]}}
+\newcommand{\mje}[1]{\textcolor{blue}{[MJE: #1]}}
+
+\renewcommand{\paragraph}[1]{\smallskip\noindent\textbf{#1.}}
+\renewcommand{\footnotesize}{\normalsize}
+
+\begin{document}
+
+\section*{Data Management Plan}
+
+% This supplementary document should describe how the proposal will conform to
+% NSF policy on the dissemination and sharing of research results (see Chapter
+% XI.D.4).
+
+% Investigators are expected to share with other researchers, at no more than
+% incremental cost and within a reasonable time, the primary data, samples,
+% physical collections, and other supporting materials created or gathered in
+% the course of work under NSF awards. Recipients are expected to encourage and
+% facilitate such sharing. Privileged or confidential information should be
+% released only in a form that protects the privacy of individuals and subjects
+% involved.
+
+% NSF normally allows recipients to retain principal legal rights to
+% intellectual property developed under NSF awards to provide incentives for
+% development and dissemination of inventions, software and publications that
+% can enhance their usefulness, accessibility, and upkeep. Such incentives do
+% not, however, reduce the responsibility that investigators and organizations
+% have as members of the scientific and engineering community, to make results,
+% data, and collections available to other researchers.
+
+\paragraph{Data Generated}
+% What types of data, samples, physical collections, software, curriculum
+% materials, and other materials will be produced in the course of the project?
+
+\paragraph{Standards for Data and Metadata}
+% What standards will be used for data and metadata format and content? Where
+% existing standards are absent or deemed inadequate, this should be documented
+% along with any proposed solutions or remedies.
+
+\paragraph{Access and Sharing Policies}
+% What policies will be used for access and sharing, including provisions for
+% appropriate protection of privacy, confidentiality, security, intellectual
+% property, or other rights or requirements?
+
+\paragraph{Reuse, Redistribution, and Derivatives}
+% What policies and provisions govern re-use, re-distribution, and the
+% production of derivatives?
+
+\paragraph{Archival Plan for Data and Materials}
+% What plans are there for archiving data, samples, and other research products,
+% and for preservation of access to them?
+
+\end{document}

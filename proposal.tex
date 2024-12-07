@@ -1,0 +1,46 @@
+% Use 11-point font for Times New Roman (PAPPG 23-1, I.II.C.2.a)
+\documentclass[11pt]{article}
+
+% Include setup/configuration for the document here.
+\input{setup/packages}
+\input{setup/acros}
+\input{setup/commands}
+\input{setup/misc}
+
+\title{Title}
+
+% Leave these blank, as they aren't needed for the proposal.
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+% maketitle resets the page style, adding a page number in, so delete it again here.
+\thispagestyle{empty}
+
+% The very beginning of the proposal should describe the project and what
+% problems it will address. Other introductory material that should be included
+% is a brief summary of existing research and gaps in the literature, research
+% questions, theoretical frameworks, etc.
+
+% Project Design and Activities
+\input{sec/project}
+
+% An evaluation/dissemination plan of some sort should typically be explicitly
+% discussed in its own section.
+
+% Intellectual Merit
+\input{sec/im}
+
+% Broader Impacts
+\input{sec/bi}
+
+% Results of Prior NSF Support
+\input{sec/prior}
+
+\newpage
+\bibliographystyle{abbrv}
+\bibliography{bib}
+
+\end{document}
